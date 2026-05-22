@@ -6,7 +6,7 @@ pipeline {
         APP_NAME = "gitops-app"
         IMAGE_TAG = "${BUILD_NUMBER}"
         IMAGE_NAME = "${DOCKERHUB_USERNAME}/${APP_NAME}"
-        CONFIG_REPO = "https://github.com/SeniorKhaled/gitops-config.git"
+        CONFIG_REPO = "https://github.com/MAnwer11/Doc_X/tree/main/gitops-app.git"
     }
 
     stages {
@@ -15,7 +15,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     credentialsId: 'github-credentials',
-                    url: 'https://github.com/SeniorKhaled/gitops-app.git'
+                    url: 'https://github.com/MAnwer11/Doc_X/tree/main/gitops-app.git'
             }
         }
 
